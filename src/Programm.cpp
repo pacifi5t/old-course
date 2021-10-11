@@ -189,7 +189,7 @@ void Programm::deselect_shape(std::vector<Figure*>& shapes, sf::Vector2i mouse_p
 void Programm::save_start(std::vector<Figure*>& shapes)
 {
 	FigureSaver saver;
-	std::ofstream fout("start.txt", std::ios_base::trunc);
+	std::ofstream fout("data/start.txt", std::ios_base::trunc);
 	for (auto& elem : shapes)
 	{
 		saver.save_state(elem);
@@ -201,7 +201,7 @@ void Programm::save_start(std::vector<Figure*>& shapes)
 void Programm::save_checkpoint(std::vector<Figure*>& shapes)
 {
 	FigureSaver saver;
-	std::ofstream fout("checkpoint.txt");
+	std::ofstream fout("data/checkpoint.txt");
 	for (auto& elem : shapes)
 	{
 		saver.save_state(elem);
@@ -215,7 +215,7 @@ void Programm::load_start(std::vector<Figure*>& shapes)
 {
 	Figure* figure = nullptr;
 	std::string buff;
-	std::ifstream fin("start.txt");
+	std::ifstream fin("data/start.txt");
 	shapes.clear();
 	while (true)
 	{
@@ -235,7 +235,7 @@ void Programm::load_checkpoint(std::vector<Figure*>& shapes)
 {
 	Figure* figure = nullptr;
 	std::string buff;
-	std::ifstream fin("checkpoint.txt");
+	std::ifstream fin("data/checkpoint.txt");
 	shapes.clear();
 	while (true)
 	{
