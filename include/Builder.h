@@ -1,0 +1,20 @@
+#pragma once
+#include <iostream>
+#include "Circle.h"
+#include "Ellipse.h"
+#include "Triangle.h"
+#include "Rectangle.h"
+#include "Star.h"
+#include "Hexagon.h"
+
+class Builder
+{
+public:
+	Figure* build_object();
+
+private:
+	std::string get_data();
+	std::string input_to_valid_string(std::string);
+	bool wrong_string(char*);
+};
+
