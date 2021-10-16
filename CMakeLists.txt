@@ -3,7 +3,6 @@ project(old-course VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_compile_options(-Ofast)
 
 find_package(SFML COMPONENTS REQUIRED system window graphics)
 
