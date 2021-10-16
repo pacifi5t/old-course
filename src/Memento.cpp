@@ -1,11 +1,5 @@
 #include "Memento.h"
 
-Memento::Memento()
-{
-	state = "";
-}
+Memento::Memento() { state = ""; }
 
-Memento::Memento(std::string st)
-{
-	state = st;
-}
+Memento::Memento(std::string st) { state = st; }
